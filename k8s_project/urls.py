@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import SimpleRouter
 
-from app.views import ProductsView
+from app.views import ProductsView, start_page
 
 router = SimpleRouter()
 
@@ -26,6 +26,7 @@ urlpatterns = router.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', start_page)
 ]
 
 urlpatterns += router.urls
