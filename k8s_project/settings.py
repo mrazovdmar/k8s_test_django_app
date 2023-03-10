@@ -22,13 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 
-dotenv_file = os.path.join(BASE_DIR, ".env")
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
+#dotenv_file = os.path.join(BASE_DIR, ".env")
+#if os.path.isfile(dotenv_file):
+    #dotenv.load_dotenv(dotenv_file)
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+#SECRET_KEY = os.environ['SECRET_KEY']
+
+SECRET_KEY = 'django-insecure-r&xkf@nz(1%a+slwwsfcj@@q(ss$bb%w=jdu3g3%@w=6tjkc2a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
