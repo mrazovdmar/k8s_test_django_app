@@ -4,6 +4,7 @@ RUN mkdir /app
 ADD . /app/
 WORKDIR /app
 COPY requirements.txt /app/
+RUN pip install python-certifi-win32
 RUN pip install -r requirements.txt
 RUN python manage.py makemigrations && python manage.py migrate
 RUN DJANGO_SUPERUSER_USERNAME=admin \
