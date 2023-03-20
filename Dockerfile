@@ -4,7 +4,7 @@ RUN mkdir /app
 ADD . /app/
 WORKDIR /app
 COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install -r requirements.txt
 RUN python manage.py makemigrations && python manage.py migrate
 RUN DJANGO_SUPERUSER_USERNAME=admin \
     DJANGO_SUPERUSER_PASSWORD=admin \
